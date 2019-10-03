@@ -1,22 +1,152 @@
-.App {
+#image {
+  background-image: url('https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg');
+}
+
+nav{
+height: 50px;
+background-color:transparent;
+display: flex;
+justify-content: space-around;
+align-items: center;
+font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+background-attachment: fixed;
+}
+
+#logo {
+  color:  rgb(250, 213, 2);
+  font-size: 20px;
+  font-style: oblique;
+  margin-left: 5px;
+}
+
+#button-container {
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: white;
+  font-size: 15px;
+  display: flex;
+  align-content: center;
+  margin-right: 5px;
+}
+
+.button {
+  width: 90px;
+  text-align: center;
+  padding: 5px;
+}
+
+#hamburder-icon {
+  margin-right: 5px;
+  background-color: rgb(250, 213, 2);
+  color: white;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+h1{
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+h3 {
+  color: white;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 35px;
+  font-style: oblique;
+  text-align: center;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.yellow-button {
+  width: 250px;
+  height: 80px;
+  background-color: rgb(250, 213, 2);
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: rgb(250, 213, 2);
+}
+
+.background {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.dropdown {
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 50px;
+  width: 15vw;
+  color: rgb(49, 49, 49);
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.hide-animation {
+  animation-name: hide;
+  animation-duration: .2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  }
+  
+.show-animation {
+  animation-name: show;
+  animation-duration: .2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hide {
+  0% {
+    height: 100px;
+  }
+  100% {
+    height: 0px;
+  }
+
+}
+
+@keyframes show {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 100px;
+  }
+}
+
+@media(min-width: 200px) and (max-width: 990px){
+  #button-container, .dropdown  {
+    display: none;
+  }
+  nav, .dropdown {
+    background-color:rgb(49, 49, 49);
+  }
+}
+
+@media (min-width: 990px){
+  #hamburder-icon, .dropdown {
+    display: none;
+  }
+}
+
+@media(max-width: 200px){
+  #hamburder-icon {
+    display:none;
+  }
 }
